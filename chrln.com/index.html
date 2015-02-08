@@ -1,0 +1,256 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width = 1920 height = 865, user-scalable = no" />
+    <title>Charlene - "Oh Hey" Digital Single Available NOW! &copy; 2010 SharkAttack Music!</title>
+	<style type="text/css">		
+		@font-face {
+			font-family: "charlene";
+			src: url("css/charlene.eot");
+			src: local("☺"),
+				url("css/charlene.woff") format("woff"), url("css/charlene.ttf") format("truetype"), url("css/charlene.svg#webfontEsOJAic2") format("svg");
+			font-weight: normal;
+			font-style: normal;
+			font-variant:normal;
+		}
+		html {
+			-webkit-font-smoothing: antialiased;
+		}
+		body {
+			font: 14px/95% arial,sans-serif;
+			letter-spacing: -0.5px;
+		}
+		#title {
+			font: bold 150px/150px "charlene",arial,sans-serif;
+			padding:20px;
+			overflow:hidden;
+			cursor:pointer;
+		}
+		#title span {
+			margin: 0px -69px 0px 0px;
+			text-transform:lowercase;
+		}
+		#logo {
+			position:fixed;
+			left: 5px;
+			bottom: 0;
+			height: 60px;
+			width: 120px;
+			background:url("img/logo-cellarphonic.png") no-repeat 5px 10px transparent;
+		}
+		#logo span {
+			font: 9px arial;
+			text-transform:lowercase;
+			letter-spacing: 0.5px;
+		}
+		#c {
+			cursor:pointer;
+			z-index: 9999;
+		}
+		#content {
+			display:none;
+			padding:0px 20px;
+			position:absolute;
+			top:60px;
+			width:280px; height: 150px;
+			overflow:hidden;
+			z-index: 99;
+		}
+		#content h2 {
+			position: relative;
+			color: rgba(237,28,36,1);
+			margin: 30px 0 15px;
+			text-transform:capitalize;
+		}
+		#content h2 #pause,
+		#content h2 #play {
+			color: #fff;
+			background-color: #000;
+			background-color: rgba(0,174,239,1);
+			padding: 2px 4px 4px 5px;
+			margin: 0 0 3px 0;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 11px;
+			text-transform: lowercase;
+			left:90px;
+			position:absolute;
+			top:-28px;
+			cursor:pointer;
+			z-index: 999;
+			letter-spacing:0px;
+		}
+		#content h2 #play-info {
+			color: rgba(0,174,239,1);
+			font-size:12px;
+			left:0;
+			position:absolute;
+			top:-25px;
+		}
+		#content ul {
+			list-style-type:decimal;
+			margin:0 0 0 -19px;
+			font-weight:bold;
+			color:#000;
+			color: rgba(237,28,36,1);
+		}
+
+		#content li {
+			padding-right:5px;
+			margin: 0 0 5px 0;
+		}
+		#content ul li a {
+			text-decoration: none;
+			display:inline-block;
+			color: #000;
+			color: rgba(0,174,239,1);
+			vertical-align:top;
+			height:20px;
+		}
+		#content ul li a:hover:after {
+			content:"play";
+			color: #fff;
+			background-color: #000;
+			background-color: rgba(237,28,36,1);
+			padding: 2px 5px 4px 5px;
+			margin: 0 0 0px 10px;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 11px;
+			text-transform: lowercase;
+			letter-spacing:0px;
+		}
+		#content ul li a:active {
+			position: relative;
+			top: 1px;
+		}
+		.red {
+			color: rgba(237,28,36,0.85);
+		}
+		.blue {
+			color: rgba(0,174,239,0.85);
+		}
+		.caption {
+			color:#CCCCCC;
+			font-size:11px;
+			margin:10px 0 10px 22px;
+			text-shadow:;
+		}
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	
+	<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			
+			// AUDIO STUFF GOES HERE!
+				// Local copy of jQuery selectors, for performance.
+			var jpPlayInfo = $("#play-info");
+
+			$("#jquery_jplayer").jPlayer({
+				ready: function () {
+					//$("#track-01").trigger("click");
+				},
+				customCssIds: true
+			})
+			.jPlayer("cssId", "play", "play")
+			.jPlayer("cssId", "pause", "pause")
+			.jPlayer("onProgressChange", function(lp,ppr,ppa,pt,tt) {
+ 				jpPlayInfo.text("( " + $.jPlayer.convertTime(pt) + " )");
+			});
+
+			$("#play").hide();
+
+			$("#track-01").click( changeTrack );
+			$("#track-02").click( changeTrack );
+			$("#track-03").click( changeTrack );
+
+			function changeTrack(e) {
+				$("#trackname").text($(this).text().replace("Play", ""));
+				$("#jquery_jplayer").jPlayer("setFile", $(this).attr("href")).jPlayer("play");
+				$(this).blur();
+				return false;
+			}
+
+			$.jPlayer.timeFormat.padMin = false;
+			$.jPlayer.timeFormat.padSec = false;
+			$.jPlayer.timeFormat.sepMin = "min ";
+			$.jPlayer.timeFormat.sepSec = "sec";
+
+			//SIZING & ANIMATIONS
+			var theLetterC = $("#c");
+			var theContentDiv = $("#content");
+
+			$("#title").toggle(
+				function () {
+
+					var windowHeight =  $(window).height();
+					var theLetterCHeight = windowHeight * 2.05;
+					var divWidth = windowHeight * .07;
+					var divMarginR = divWidth * 4;
+					var divMarginR = +-divMarginR;
+					var divMarginL = divMarginR * .5;
+
+					theLetterC.animate({fontSize: theLetterCHeight, marginRight: divMarginR, marginLeft: divMarginL, easing: "linear"},1000, function (){
+						var contentDivHeight = theLetterC.height();
+						var contentDivTop = contentDivHeight *.1;
+						contentDivHeight = contentDivHeight * .2;
+
+						var contentDivWidth = theLetterC.width();
+						var contentDivLeft = contentDivWidth * .327;
+						contentDivWidth = contentDivWidth * .23;
+
+						theContentDiv.css({"top" : contentDivTop, "left" : contentDivLeft});
+						theContentDiv.delay(1000).fadeIn();
+					});
+				},
+				function (){
+					theContentDiv.fadeOut("slow", function (){
+						theLetterC.animate({fontSize: "150px", marginRight: "-69px", marginLeft: "0px"},1000);
+					});
+				}
+			);
+		});
+	</script>
+</head>
+<body>
+	<div id="jquery_jplayer"></div>
+	<div id="logo">
+		<span>Presented In:</span>
+	</div>
+	<div id="title">
+		<span id="c" class="red">c</span>
+		<span id="h" class="blue">h</span>
+		<span id="a" class="red">a</span>
+		<span id="r" class="blue">r</span>
+		<span id="l" class="red">l</span>
+		<span id="e1" class="blue">e</span>
+		<span id="n" class="red">n</span>
+		<span id="e2" class="blue">e</span>
+	</div>
+	<div id="content">
+		<h2>
+			<span id="trackname">Select a Track:</span>
+			<span id="play-info"></span>
+			<span id="pause">Pause</span>
+			<span id="play">Resume</span>
+		</h2>
+		<ul>
+			<li>
+				<a href="audio/Charlene-Oh_Hey-01-Oh_Hey.mp3" id="track-01">Oh Hey</a>
+			</li>
+			<li>
+				<a href="audio/Charlene-Oh_Hey-02-Before_The_Comet_Hits.mp3" id="track-02">Before The Comet Hits</a>
+			</li>
+			<li>
+				<a href="audio/Charlene-Oh_Hey-03-Big_Winds.mp3" id="track-03">Big Winds</a>
+			</li>
+		</ul>
+		<p class="caption">&copy; 2010 SharkAttack! Music</p>
+	</div>
+</body>
+</html>
