@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<!-- JQuery -->
+<script type="text/javascript" src="http://files.thebrobots.com/jquery.js"></script>
+<script type="text/javascript" src="http://files.thebrobots.com/broscripts.js"></script>
+
+<!-- SoundManager -->
+<script type="text/javascript" src="http://files.thebrobots.com/soundmanager2.js"></script>
+<script type="text/javascript" src="http://files.thebrobots.com/inlineplayer.js"></script>
+<style type="text/css">
+body {
+	background-color:#00FF00;  
+	font:11px "Lucida Grande", "Lucida Sans", "Trebuchet MS", verdana, sans-serif;
+	color:#000000;
+	height: 2000px;
+}  
+
+#disclaimerwrapper, #sidetabwrapper {
+	position:fixed;
+	margin: 0px;
+	padding:0px;
+	background-image:url(disclaimer.gif);
+	background-repeat:no-repeat;
+	height: 93px;
+	width: 22px;
+	overflow:hidden;
+	cursor:pointer;
+	visibility:hidden;
+}
+
+#sidetabwrapper {
+	background-image:url(disclaimer.gif);
+}
+
+#disclaimerbg, #sidetabbg {
+	margin: 0px 0px 0px 22px;
+	background-color:#FF0000;
+	border-left:#FFFFFF dashed thin;
+}
+
+#sidetabbg {
+	background-color:#000000;
+}
+
+#disclaimer, #sidetab {
+	padding: 3px 0px 0px 5px;
+	font-size:11px;
+	color:#FFFFFF;
+	height:93px;
+	vertical-align:middle;
+}
+
+.contactemail {
+	text-decoration:underline;
+	color:#FFFFFF;
+}
+
+/* Default + hover state, "click to play": */
+a.sm2_link {
+	background-color:#000000;
+	padding: 5px;
+	margin: 100px;
+	border:#000000 2px;
+	color:#FFFFFF;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+a.sm2_link:hover {
+	background-color:#FFFFFF;
+	border:#000000 2px;
+	padding: 5px;
+	margin:  100px;
+	color:#000000;
+}
+
+/* Playing + hover state, "click to pause": */
+a.sm2_playing {
+	background-color:#FF0000;
+	width: 400px;
+	color:#FFFFFF;
+}
+
+a.sm2_playing:hover {
+}
+
+/* Paused + hover state, "click to resume": */
+a.sm2_paused {
+}
+
+a.sm2_paused:hover {
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- sidebar -->
+<div id="sidetabwrapper"><div id="sidetabbg"><div id="sidetab"><script src="http://files.thebrobots.com/twitinjection.php" type="text/javascript" charset="utf-8"></script></div></div></div>
+
+<!-- disclaimer -->
+<div><p><a href="http://files.thebrobots.com/Charlene-Oh_Hey_[single]-03-Big_Winds.mp3">MP3 file</a></p><p><a href="Charlene-Oh_Hey_[single]-01-Big_Winds.mp3">MP3 file</a></p></div>
+<div id="disclaimerwrapper"><div id="disclaimerbg"><div id="disclaimer">We aren't pirates. Promise! We just love introducing people to new things. If you are a copyright holder and want your stuff removed from this site, <a href="mailto:dearbobbyfever@gmail.com" class="contactemail">contact us</a></div></div></div>
+</body>
+</html>
