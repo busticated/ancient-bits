@@ -1,0 +1,24 @@
+﻿html {
+	height: 100%;
+	width: 100%;
+}
+body,
+#page {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+#stage {
+	position:relative;
+	width:980px;
+	min-height:460px;
+	top: 50%;
+	left: 50%;
+	margin-top: -230px;
+	margin-left: -490px;
+	cursor:pointer;
+}
+#info {
+	bottom: -278px;
+	height: 309px;
+}

@@ -1,0 +1,65 @@
+﻿#page {
+	padding: 30px 0 0 30px;
+	font: normal 14px/14px arial;
+}
+#main {
+	position: absolute;
+	display: block;
+	width: 960px;
+	left: 50%;
+	margin-left: -480px;
+	overflow:hidden;
+}
+#title {
+	display:none;
+	font: bold 223px/190px arial;
+	letter-spacing: -26px;
+	text-align:left;
+	text-rendering: optimizeLegibility;
+	padding: 10px 0 0 30px;
+}
+.titleText {
+	color: rgb(255, 0, 0);
+	color: rgba(255, 0, 0, 0.8);
+}
+#nav {
+	display:none; /* initial state - shown after animation completes */
+	list-style-type: none;
+	padding: 0 0 0 33px;
+}
+#nav li {
+	display: inline-block;
+	position: relative;
+	margin: 12px;
+	font: normal 72px/60px arial;
+	color: #000;
+	width: 150px;
+	height: 150px;
+}
+#nav a,
+#nav a:visited,
+#nav a:active {
+	color: #000;
+	display:block;
+	padding: 45px;
+	text-decoration:none;
+	background: rgba(255, 255, 255, 0.6);
+}
+#nav li:hover,
+#nav li:hover a {
+	background:rgba(0, 0, 0, 0.1);
+	color: #fff;
+}
+#nav a:active {
+	font-style: italic;
+}
+@media only screen and (max-device-width: 480px) {
+	#info,
+	#contact {
+		display: none;
+		left: -9999px;
+	}
+	#main {
+		padding: 20px 0 0 0;
+	}
+}

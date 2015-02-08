@@ -1,0 +1,80 @@
+{
+	"404" : {
+		"name" : "404",
+		"num" : -1,
+		"hasSubNav" : 0,
+		"createDate" : "20 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "20 Jun 2010 0:0:00 GMT-0700",
+		"image" : "",
+		"description" : ""
+	},
+	"home" : {
+		"name" : "home",
+		"num" : 0,
+		"hasSubNav" : 0,
+		"createDate" : "20 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "20 Jun 2010 0:0:00 GMT-0700",
+		"image" : "",
+		"description" : ""
+	},
+	"grid" : {
+		"name" : "grid",
+		"num" : 1,
+		"hasSubNav" : 1,
+		"createDate" : "21 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "17 Jul 2010 1:50:00 GMT-0700",
+		"thumbnail" : "img/thumb-grid.png",
+		"image" : "img/full-grid.png",
+		"description" : "I wanted to see if I could replicate <a href=\"http://en.wikipedia.org/wiki/Noise_%28video%29\">analog TV snow</a>... I guess I miss it? Anyway, giant pixelated background .png. Each block is 12px square. My script simply assigns a random multiple of 12 to the background image's X &amp; Y position. To keep the visual smooth, I make sure the new position isn't too close to the old one and that the image still covers all of the screen. MAGIC!"
+	},
+	"balls" : {
+		"name" : "balls",
+		"num" : 2,
+		"hasSubNav" : 1,
+		"createDate" :"22 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "18 Jul 2010 1:50:00 GMT-0700",
+		"thumbnail" : "img/thumb-balls.png",
+		"image" : "img/full-balls.png",
+		"description" : "During his talk @ JSConf 2010 (<a href=\"http://jsconf.blip.tv/file/3731552/\">video</a>), <a href=\"http://dmitry.baranovskiy.com/\">Dmitry Baranovskiy</a> explained how you could export a vector graphic from Adobe Illustrator and use it with <a href=\"http://raphaeljs.com/\">Raphael.js</a>. (Me = :-O) So, I gave it a whirl. The \"busticated\" text / logo is an exported SVG path. The tricky bit with this one (at least for me) was cleaning up. After a certain number of circles are drawn, I start deleting the old ones."
+	},
+	"hypno" : {
+		"name" : "hypno",
+		"num" : 3,
+		"hasSubNav" : 1,
+		"createDate" :"23 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "19 Jul 2010 1:50:00 GMT-0700",
+		"thumbnail" : "img/thumb-hypno.png",
+		"image" : "img/full-hypno.png",
+		"description" : "Still playing around with <a href=\"http://raphaeljs.com\">Raphael.js</a>. This time I recursively draw some circles then animate them in an attempt to replicate the art from an old <a href=\"http://en.wikipedia.org/wiki/Spacemen_3\">Spacemen 3</a> album. I also took a stab at drawing my own icon (the home icon you see top left). I'm pretty psyched on the ol' Raphael.js - lots of possibilities!"
+	},
+	"ascii" : {
+		"name" : "ascii",
+		"num" : 4,
+		"hasSubNav" : 0,
+		"createDate" :"24 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "20 Jul 2010 1:50:00 GMT-0700",
+		"thumbnail" : "img/thumb-ascii.png",
+		"image" : "img/full-ascii.png",
+		"description" : "What can I say? I'm a sucker for <a href=\"http://en.wikipedia.org/wiki/ASCII_art\">ascii art</a>. I couldn't resist taking a shot at drawing something using JavaScript. Tricky bits here are: Making sure the ascii output fits in the screen (try resizing &amp; refreshing), drawing and styling the \"X\" characters (and links), and giving the user a way to bail out if things get too slow. Which they often do. Especially in IE. Sorry! (<a href=\"http://twitter.com/b_sted\">li'l help?</a>)"
+	},
+	"moballs" : {
+		"name" : "moballs",
+		"num" : 5,
+		"hasSubNav" : 1,
+		"createDate" :"25 Jun 2010 0:0:00 GMT-0700", 
+		"modDate" : "21 Jul 2010 1:50:00 GMT-0700",
+		"thumbnail" : "img/thumb-moballs.png",
+		"image" : "img/full-moballs.png",
+		"description" : "More fun with <a href=\"http://raphaeljs.com\">Raphael.js</a>. A sort of variant on <a href=\"http://www.busticated.org/index.htm?p=balls\">experiment #2</a>. This time I use the whole screen and animate the circles as they are drawn and removed."
+	},
+	"ping" : {
+		"name" : "ping",
+		"num" : 6,
+		"hasSubNav" : 1,
+		"createDate" :"23 Aug 2010 1:10:00 GMT-0700", 
+		"modDate" : "23 Aug 2010 1:10:00 GMT-0700",
+		"thumbnail" : "img/thumb-ping.png",
+		"image" : "img/full-ping.png",
+		"description" : "I love finding random bits of history online. Ages ago I came across a vintage <a href=\"http://www.maritime.org/fleetsub/sonar/chap4.htm\">Submarine Sonar Operator's Manual</a> and thought it might make a cool show poster. I got voted down but always had a soft spot for the image. When I was looking around for my next experiment, I thought \"perfect! I'll just animate some bits and toss it up there\". Yeah. <em>Wrong</em>. On the bright-side, a total lesson in feature-creep. Drag the sub around and click the destroyer to start the search. We got a little HTML5 audio action in there. Some ham-handed collision detection. Scaling (resize browser and refresh). And a bonus - See the <a href=\"http://en.wikipedia.org/wiki/Doppler_effect\">Doppler effect</a> in action! Dood. Fahkin' <em>Science!</em> SVG help via the magnificent <a href=\"http://raphaeljs.com/\">Raphael.js</a>, Audio samples by <a href=\"http://www.freesound.org/usersViewSingle.php?id=215874\">ERH</a> &amp; <a href=\"http://www.freesound.org/usersViewSingle.php?id=98464\">InfoBandit</a> (courtesy of the <a href=\"http://www.freesound.org\">FreeSound Project</a>)"
+	}
+}

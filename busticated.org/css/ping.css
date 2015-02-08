@@ -1,0 +1,82 @@
+﻿html,
+body {
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+}
+#page {
+	width: 100%;
+	height: 100%;
+}
+#stage {
+	width: 100%;
+	height: 100%;
+}
+#stage #water {
+	pointer-events: none;
+}
+#UBK8D {
+	cursor: pointer;
+}
+#USSBustication {
+	cursor:pointer;
+}
+#detectedAlert {
+	position:absolute;
+	display:none;
+	right: 90px;
+	top: 30px;
+	font: 16px/14px Courier New;
+	text-align: right;
+	padding: 10px;
+	background-color: rgba(245, 245, 245, 0.7);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px dashed #eee;
+	z-index: 9998;
+}
+#detectedAlert #close {
+	line-height: 10px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	padding: 3px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	border: 1px dashed #eee;
+	color: #ccc;
+	cursor:pointer;
+}
+#detectedAlert #close:hover {
+	border: 1px solid #eee;
+	color: #fff;
+	background: #eee;
+}
+#detectedAlert a,
+#detectedAlert a:active,
+#detectedAlert a:visited {
+	color: #000;
+	text-decoration:none;
+	font-size: 16px;
+	font-weight: bold;
+}
+#detectedAlert a:before {
+	content: "< < < < < < ";
+}
+#detectedAlert a:hover {
+	color: #ff0000;
+}
+#detectedAlert a:hover:before {
+	content: "< < < < < < < < ";
+}
+#detectedAlert p {
+	border-bottom: 1px solid  #CCC;
+	padding: 3px;
+	margin-bottom: 10px;
+}
+#info {
+	bottom: -404px;
+	height: 435px;
+}

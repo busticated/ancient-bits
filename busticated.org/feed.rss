@@ -1,0 +1,43 @@
+<?php
+//Helper function for json_decode - handles looser JSON syntax
+function json_decode_nice($json, $assoc = TRUE) {
+	$json = str_replace(array("\n","\r"), "", $json);
+	//$json = str_replace(":", "&colon;", $json);
+	$json = preg_replace('/([{,])(\s*)([^"]+?)\s*:/','$1"$3":', $json);
+	//$json = htmlentities($json, ENT_NOQUOTES, "UTF-8");
+	return json_decode($json, $assoc);
+};
+
+//Set master "last updated" timestamp
+$rssLastUpdated = date (DateTime::RFC2822, filemtime("data/pages.json"));
+
+$rssStart = "<?xml version=\"1.0\" encoding=\"utf-8\" ?><rss version=\"2.0\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:atom=\"http://www.w3.org/2005/Atom\"><channel><title>Busticated.org - Latest Updates</title><description>Hi! I'm Matt. Busticated.org is where I play around with code and learn how to break things in (hopefully) interesting ways. Enjoy!</description><lastBuildDate>" . $rssLastUpdated . "</lastBuildDate><atom:link href=\"http://busticated.org/feed.rss\" rel=\"self\" type=\"application/rss+xml\" /><link>http://www.busticated.org/</link><language>en-us</language>";
+$rssItems = "";
+$rssEnd = "</channel></rss>";
+
+// load URL
+$contents = file_get_contents("data/pages.json");
+	
+// parse JSON and build an array of associative arrays in memory
+$items = json_decode_nice($contents);
+
+// iterate over items in JSON file
+foreach ($items as $item) {
+	// extract fields
+	$title = $item["name"];
+	$link = "http://www.busticated.org/index.htm?page=" . $item["name"];
+	$image = ($item["image"]) ? "<img src=\"http://www.busticated.org/" . $item["image"] . "\" />" : null;
+	$description = $image . $item["description"];
+	$pubDate = $item["modDate"];
+	
+	//fix date format
+	$pubDate = date (DateTime::RFC2822, strtotime($pubDate));
+	
+	//build out items section of RSS feed
+	$rssItems .= "<item><title>$title</title><guid>$link</guid><pubDate>$pubDate</pubDate><link>$link</link><content:encoded><![CDATA[$description]]></content:encoded></item>";
+};
+
+//output the RSS XML w/ appropriate header
+//header("Content-type: application/rss+xml");
+print $rssStart . $rssItems . $rssEnd;
+?>

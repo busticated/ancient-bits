@@ -1,0 +1,35 @@
+﻿* {
+	margin: 0;
+	border:0;
+	padding:0;
+}
+html {
+}
+#page {
+	position: relative;
+}
+#main {
+	position:relative;
+	margin: 20px 0 0 0;
+}
+.error {
+	font: bold 240px/230px arial;
+	color: Red;
+	text-transform: uppercase;
+	text-align:center;
+}
+.error span {
+	display: block;
+	font: bold 16px/16px arial;
+	margin: 60px 0 0 0;
+}	
+.error a,
+.error a:active,
+.error a:visited {
+
+	text-decoration: none;
+	color: Black;
+}
+.error a:hover {
+	text-decoration: underline;
+}
