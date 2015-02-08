@@ -1,0 +1,56 @@
+BODY {
+	background : White;
+	margin-bottom : 0;
+	margin-left : 0;
+	margin-right : 0;
+	margin-top : 0;
+}
+A {
+	color : Navy;
+}
+A:visited {
+	color : Gray;
+}
+A:active {
+	color : White;
+}
+H1 {
+	font-family : "MS Sans Serif", Geneva, sans-serif;
+	font-size : 900px;
+	color : #000000;
+	margin-bottom : 0px;
+	margin-top : -70px;
+	margin-right : 0px;
+	margin-left : 0px;
+}
+H2 {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 42px;
+	color : #000000;
+	margin-bottom : 0px;
+}
+H3 {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 22px;
+	color : #000000;
+	margin-bottom : 0px;
+	margin-left : 32px;
+	margin-top : 0px;
+}
+OL {
+	margin-left : 33px;
+}
+LI{
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 12px;
+	margin-left : 33px;
+}
+/*
+select {
+	border: 1px solid #ccc;
+	background: #FAEBD7;
+	padding: 2px;
+	color: #444;
+	font : xx-small Verdana,Arial,Sans-Serif;
+}
+*/

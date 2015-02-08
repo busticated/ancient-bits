@@ -1,0 +1,54 @@
+BODY,  TD, TH, DIV, FORM {
+	background : White;
+	margin-bottom : 0;
+	margin-left : 1;
+	margin-right : 0;
+	margin-top : 1;
+}
+H1 {
+	font-family : Courier;
+	font-size : 35px;
+	font-weight : bold;
+	color : Black;
+	background : White;
+}
+A {
+	font-family : Courier,Sans-Serif;
+	font-size : 10px;
+	color : Black;
+}
+A:visited {
+	font-family : Courier,Sans-Serif;
+	font-size : 10px;
+	color : Gray;
+}
+A:active {
+	font-family : Courier,Sans-Serif;
+	font-size : 10px;
+	color : #FFFFFF;
+}
+FONT {
+	font-family : Courier,Sans-Serif;
+	font-size : 10px;
+	color : Black;
+}
+FONT.error {
+	font-family : Courier,Sans-Serif;
+	font-size : 10px;
+	text-decoration : blink;
+}
+INPUT {
+	font : 10px Courier,sans-serif;  
+	border : 1px solid Black;
+	background : Silver;
+}
+INPUT.upload {
+	font : 10px Verdana,sans-serif;  
+	border : 1px solid Black;
+	background : ButtonFace;
+}
+TD.bulletedtable {
+	width : 99%;
+	vertical-align : top;
+	text-align : left;
+}

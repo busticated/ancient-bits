@@ -1,0 +1,62 @@
+BODY,  TD, TH, DIV, FORM {
+	background : Red;
+	margin-bottom : 0;
+	margin-left : 0;
+	margin-right : 0;
+	margin-top : 0;
+}
+A {
+	color : White;
+}
+A:visited {
+	color : White;
+}
+A:active {
+	color : Red;
+}
+A.hidden {
+	color : Red;
+}
+A.hidden:visited {
+	color : Red;
+}
+A.hidden:active {
+	color : Red;
+}
+FONT {
+	font : 12px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.error {
+	font : bold 24px "Courier New", Courier, monospace;
+	color : White;
+	text-decoration : blink;
+}
+FONT.new {
+	font : bold italic 24px "Courier New", Courier, monospace;
+	color : White;
+	text-decoration : blink;
+}
+FONT.header {
+	font : bold 24px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.nav {
+	font : bold 16px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.subheader {
+	font : 22px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.subheader2 {
+	font : bold 16px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.tours {
+	font : 12px "Courier New", Courier, monospace;
+	color : White;
+}
+FONT.hidden {
+	font : 12px "Courier New", Courier, monospace;
+	color : Red;

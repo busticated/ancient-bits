@@ -1,0 +1,89 @@
+BODY,  TD, TH {
+	background : #FAEBD7;
+	margin-bottom : 0;
+	margin-left : 0;
+	margin-right : 0;
+	margin-top : 0;
+}
+A {
+	color : Navy;
+}
+A:visited {
+	color : Gray;
+}
+A:active {
+	color : White;
+}
+FONT {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : #000000;
+}
+H1 {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 22px;
+	color : #000000;
+}
+.headline {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 20px;
+	color : Black;
+}
+.error {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : Red;
+}
+.success {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : Green;
+}
+.update {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : Blue;
+}
+FONT.error {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : red;
+}
+FONT.new {
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	color : red;
+	font-style : italic;
+}
+TD.bulletedtable {
+	width : 99%;
+	vertical-align : top;
+	text-align : left;
+}
+DIV.albumart{
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	background-color : transparent;
+	position : absolute;
+	top : 330px;
+	left : 10px;
+}
+DIV.emailsignup{
+	font-family : Verdana,Arial,Sans-Serif;
+	font-size : 10px;
+	background-color : transparent;
+	color : Black;
+	position : absolute;
+	top : 30px;
+	left : 20px;
+	text-align : right;
+}
+/*
+select {
+	border: 1px solid #ccc;
+	background: #FAEBD7;
+	padding: 2px;
+	color: #444;
+	font : xx-small Verdana,Arial,Sans-Serif;
+}
+*/

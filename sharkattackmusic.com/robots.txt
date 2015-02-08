@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /media/
+Disallow: /audio/
+Disallow: /bidness/
+Disallow: /art/
+Disallow: /biz/
+Disallow: /images/
+Disallow: /snaps/
+Disallow: /tracking/
+Disallow: /styles/
+Disallow: /charlene/
+Disallow: /DEV/
+Disallow: /ch/
