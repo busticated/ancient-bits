@@ -1,0 +1,6 @@
+# override global gitignore
+!*
+
+# ignore
+.DS_Store
+thebrobots.com/files/*.mp3
