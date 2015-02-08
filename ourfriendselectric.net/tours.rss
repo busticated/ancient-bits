@@ -1,0 +1,24 @@
+<?php 
+
+$artisttourspage = "http://www.ourfriendselectric.net/ch.php?pg=tours";
+
+$offset = date('O');
+$rssOffset = substr($offset,0,3) . ":00";
+$time = date("Y-m-d") . "T" . date("h:i:s") . $rssOffset;
+
+$rsspubdate = date("D, d M Y") . date(" h:i:s") . date(" T");
+
+$rssOutput = '<?xml version="1.0" encoding="iso-8859-1"?><rss version="2.0">';
+
+// start the channel
+$rssOutput .= "<channel><title>Charlene: Tours</title><link>$artisttourspage</link><description>Tour Dates feed for Charlene</description><language>en-us</language><pubDate>$rsspubdate</pubDate><lastBuildDate>$rsspubdate</lastBuildDate><docs>http://blogs.law.harvard.edu/tech/rss</docs><generator>Hostbaby</generator>";
+
+header('Content-type: text/xml');
+echo $rssOutput;
+
+require 'hostbaby';
+show_calendar('charlene', 'tours-rss.tmpl')
+
+?>
+</channel> 
+</rss> 

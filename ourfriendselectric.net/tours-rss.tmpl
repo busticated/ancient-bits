@@ -1,0 +1,17 @@
+<?php 
+
+$artisttourspage = "http://www.ourfriendselectric.net/ch.php?pg=tours";
+
+$offset = date('O');
+$rssOffset = substr($offset,0,3) . ":00";
+$pubDate = date("D, d M Y", strtotime("$event_date -2 months")) . date(" h:i:s", strtotime($event_date)) . date(" T", strtotime($event_date));
+
+$title = date('l', strtotime($event_date)) . ", " . date('F j Y', strtotime($event_date));
+
+$showDetails = "<item><title>Charlene Live: $city, $state </title><link>$artisttourspage</link><description><![CDATA[<p><b>$title</b> - $city, $state | <a href=\"$venue_url\">$venue</a> $event_title | $notes $price</p>]]></description><pubDate>$pubDate</pubDate><guid>$artisttourspage</guid></item>";
+
+$rssOutput = "$showDetails";
+
+echo $rssOutput;
+
+?>

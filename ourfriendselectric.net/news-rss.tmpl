@@ -1,0 +1,17 @@
+<?php 
+
+$artistnewspage = "http://www.ourfriendselectric.net/ch.php?pg=news&amp;news_id=$news_id";
+
+$offset = date('O');
+$rssOffset = substr($offset,0,3) . ":00";
+$time = date("D, d M Y", strtotime($news_date)) . date(" h:i:s", strtotime($news_date)) . date(" T", strtotime($news_date));
+
+$title = $news_title;
+
+$showDetails = "<p>" . nl2br($news_text) . "</p>";
+
+$rssOutput = "<item><title>$title</title><link>$artistnewspage</link><description><![CDATA[$showDetails]]></description><pubDate>$time</pubDate><guid>$artistnewspage</guid></item>";
+
+echo $rssOutput;
+
+?>

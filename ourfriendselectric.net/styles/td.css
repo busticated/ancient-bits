@@ -1,0 +1,338 @@
+body {
+	margin:0px;
+	padding:0px;
+	font-family : Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	background-color : #FFFFFF;
+	font-size : 8pt;
+}
+ /* Need to set body margin and padding to get consistency between browsers. */
+
+A:LINK {
+	color: #000000
+}
+A:VISITED {
+	color:#000000
+}
+
+IMG{
+	border:none;
+}
+
+/* SPLASH SCREEN */
+ #horizon {
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+}
+
+#splash {
+	position:absolute;
+	left:50%;
+	width:500px;
+	margin-left:-250px;
+	top : -150;
+	height: 200px;
+}
+
+ /* HEADER & STYLE SWITCHER */ 
+#header {
+	position:absolute;
+	left:50%;
+	width:500px;
+	margin-left:-250px;
+	margin-top : 10px;
+	height : 200px;
+	background-color: #FFFFFF;
+	background: url(../images/td-header.jpg) no-repeat bottom left;
+}
+
+#stylepicker {
+	margin: 0;
+	padding: 10px 0 0 10px;
+}
+
+#stylepicker ul, #stylepicker li {
+	margin: 0px;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+ /* MENU & NAVIGATION */ 
+
+#tabcontainer{
+	position : absolute;
+	width: 500px;
+	top:210px;
+	left: 1px;
+	padding: 0px;
+	background: #FFFFFF;
+}
+
+#tabnav	{
+		height: 20px;
+		margin: 0;
+		padding-left: 10px;
+}
+
+#tabnav li	{
+		margin: 0; 
+		padding: 0;
+  		display: inline;
+  		list-style-type: none;
+}
+	
+#tabnav a:link, #tabnav a:visited	{
+		float: left;
+		background: #E45751;
+		font-size: 12px;
+		line-height: 14px;
+		padding: 2px 10px 2px 10px;
+		margin-right: 4px;
+		border: 1px solid #E45751;
+		text-decoration: none;
+}
+
+#tabnav a:link.active, #tabnav a:visited.active	{
+		background: #FFFFFF;
+		color: #E45751;
+}
+
+#tabnav a:hover	{
+		background: #FFFFFF;
+		color: #E45751;
+}
+	
+ /* CONTENT */
+ 
+#content {
+	position:absolute;
+	left:50%;
+	width:500px;
+	margin-top:239px;
+	margin-left:-250px;
+	background : url(../images/curved-top.gif) no-repeat top left;
+	background-color: #E45751;
+}
+
+#data{
+	padding: 10px 0px 0px 15px; 
+	text-align:left;
+	color: #000000;
+}
+
+#bottom{
+	background : url(../images/curved-bottom.gif) no-repeat bottom left;
+	height : 7px;
+	clear: both;
+}
+
+#spacer{
+	margin: 100px;
+	clear: both;
+}
+
+ /* GALLERY */
+ 
+IMG.thumb {
+	border : none;
+	margin : 10px;
+}
+
+/* NEWS */
+ 
+.news_entry {
+	margin-right: 15px;
+}
+
+.news_title {
+	font-weight : bold;
+	text-transform : uppercase;
+	font-size : 10pt;
+}
+
+.news_text {
+}
+
+.news_links {
+	padding-bottom : 5px;
+	margin-bottom : 10px;
+	margin-right: 15px;
+	border-bottom : 1px dashed #000000;
+	font-size : 8pt;
+}
+
+#news_footer {
+	font-size : 8pt;
+}
+
+#news_footer img{
+	border : none;
+	vertical-align : bottom;
+}
+
+.news_next {
+}
+
+.news_prev {
+}
+
+/*MUSIC AND MERCH */
+
+.album_headline{
+	font-weight : bold;
+	text-transform : uppercase;
+	font-size : 10pt;
+	margin-bottom : 10px;
+}
+
+.album{
+}
+
+.album_art{
+	float : left;
+	margin-right : 10px;
+	margin-bottom: 30px;
+	border : 1px solid #000000;
+}
+
+.album_title{
+	font-size: 14pt;
+	font-weight : bold;
+}
+
+.album_format{
+}
+
+.album_label{
+}
+
+.album_date{
+}
+
+.album_tracks{
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 250px;
+}
+
+.album_buy{
+	clear:both;
+	margin-bottom:20px;
+	margin-right: 15px;
+	border-bottom : 1px dashed #000000;
+}
+
+.album_select {
+	font-size : 7pt;
+	margin-bottom: 5px;
+}
+
+.album_buttons {
+	margin : 5px 0px 0px 3px;
+	border : none;
+}
+
+ /* TOURS */
+  
+#tours_current{
+	padding-bottom : 5px;
+	margin-bottom : 20px;
+	margin-right: 15px;
+	border-bottom : 1px dashed #000000;
+}
+
+#tours_past{
+	padding-bottom : 5px;
+	margin-bottom : 10px;
+	margin-right: 15px;
+	border-bottom : 1px dashed #000000;
+}
+
+.toursheadline{
+	font-weight : bold;
+	text-transform : uppercase;
+	font-size : 10pt;
+	margin-bottom : 10px
+}
+
+.tours_entry {
+	margin-bottom : 0px;
+	padding : 0px;
+}
+
+.tours_date {
+	font-weight : bold;
+}
+
+.tours_city {
+}
+
+.tours_venue {
+}
+
+.tours_buttons {
+	margin : 3px 3px 3px 3px;
+	vertical-align : middle;
+}
+
+.tours_notes {
+	font-size : 8pt;
+}
+
+#tours_footer {
+	font-size : 8pt;
+}
+
+#tours_footer img{
+	border : none;
+	vertical-align : bottom;
+}
+
+/*CONTACT */
+#miniform{
+	padding : 10px;
+}
+
+#miniform fieldset{
+	border:1px solid #000000;
+}
+
+.headline {
+	font-weight : bold;
+	font-size : 10pt;
+	text-transform : uppercase;
+}
+
+#contact {
+	border-bottom : 1px dashed #000000;
+	padding-bottom : 5px;
+	margin-top : 10px;
+	margin-right: 15px;
+	margin-bottom : 15px;
+}
+
+DIV.emailsignup{
+	text-align : center;
+	margin-bottom : 0px;
+}
+
+#contactform {
+	text-align : right;
+	padding : 10px 0px 10px 0px;
+	margin-right : 140px;
+}
+
+.error {
+	font-weight : bold;
+	text-align : center;
+}
+
+.success {
+}
+
+.update {
+}

@@ -1,0 +1,23 @@
+<!-- TOURS START -->
+<div id="tours_current">
+<div class="toursheadline">Upcoming:</div>
+<?php require("hostbaby");?>
+<? if (!show_calendar("charlene", "tours.tmpl")) { ?> 
+<i>No dates scheduled at the moment. Check back soon!</i> 
+<? } ?>
+</div>
+<div id="tours_past">
+<div class="toursheadline">Archive: 
+<span id="toursyear">
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2001\">"; ?>2001</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2002\">"; ?>2002</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2003\">"; ?>2003</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2004\">"; ?>2004</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2005\">"; ?>2005</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2006\">"; ?>2006</a> | 
+<? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;year=2007\">"; ?>2007</a></span></div>
+<? show_calendar_past_dates("charlene", "tours-archive.tmpl") ?>
+</div>
+<div id="tours_footer"><a href="tours.rss"><img src="images/<?= $st ?>-feed-icon.gif" width="16" height="16" alt="subscribe to charlene's tours feed"></a> [RSS2.0] <a href="tours.rss">Subscribe to Tours feed</a> 
+</div>
+<!-- TOURS END -->

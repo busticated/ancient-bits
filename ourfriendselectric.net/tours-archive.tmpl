@@ -1,0 +1,6 @@
+<? $pg = $_GET['pg']; ?>
+<? $st = $_GET['st']; ?>
+<? $year = $_GET['year'] ?>
+<? if ($year == "") {$year="2007";} ?>
+<? if (date('Y', strtotime($event_date.' '.$event_time)) != $year) return; ?>
+<p class="tours_entry"><span class="tours_date"><?= date('D', strtotime($event_date)) ?>, <?= date('M j Y', strtotime($event_date)) ?></span> | <span class="tours_city"><?= $city ?>, <?= $state ?></span> | <span class="tours_venue"><? echo "<a href=\"$venue_url\">"; ?><?= $venue ?></a><? if ($event_title != "") {echo " | $event_title";}?></span><br/><span class="tours_notes"><?= $notes ?></span></p>

@@ -1,0 +1,12 @@
+<? $pg = $_GET['pg']; ?>
+<? $st = $_GET['st']; ?>
+<? if ($st == "") {$st="ch";} ?>
+<? if ($pg == "") {$pg="news";} ?>
+<? $mapparams = $address . ', ' . $city . ', ' . $state . ' ' . $zip ; ?>
+<? $posterdateraw = strtolower (date('l', strtotime($event_date)) . ', ' . date('F j Y', strtotime($event_date))); ?>
+<? $posterdate = urlencode(rtrim(preg_replace('/(.)/', '$1 ', $posterdateraw))); ?>
+<? $postervenue = urlencode(strtolower (rtrim(preg_replace('/(.)/', '$1 ', $venue)))); ?>
+<? $posternotesraw = strip_tags($notes); ?>
+<? $posternotes = urlencode(strtolower (rtrim(preg_replace('/(.)/', '$1 ', $posternotesraw)))); ?>
+<? $map = urlencode($mapparams); ?>
+<p class="tours_entry"><span class="tours_date"><?= date('D', strtotime($event_date)) ?>, <?= date('M j Y', strtotime($event_date)) ?></span> | <span class="tours_city"><?= $city ?>, <?= $state ?></span> | <span class="tours_venue"><? echo "<a href=\"$venue_url\">"; ?><?= $venue ?></a> <? if ($event_title != "") {echo " | $event_title";}?> <? echo "<a href=\"http://maps.google.com/maps?f=q&amp;hl=en&amp;q=$map\"><img src=\"images/$st-map.gif\" width=\"27\" height=\"14\" alt=\"click for map\" class=\"tours_buttons\"/></a>"; ?><? echo "<a href=\"pdf.php?date=$posterdate&amp;venue=$postervenue&amp;notes=$posternotes\"><img src=\"images/$st-poster.gif\" width=\"42\" height=\"14\" alt=\"click for printable poster\" class=\"tours_buttons\"/></a>"; ?></span><br/><span class="tours_notes"><?= $notes ?></span></p>

@@ -1,0 +1,8 @@
+<? $mapparams = $address . ', ' . $city . ', ' . $state . ' ' . $zip ; ?>
+<? $posterdateraw = strtolower (date('l', strtotime($event_date)) . ', ' . date('F j Y', strtotime($event_date))); ?>
+<? $posterdate = urlencode(rtrim(preg_replace('/(.)/', '$1 ', $posterdateraw))); ?>
+<? $postervenue = urlencode(strtolower (rtrim(preg_replace('/(.)/', '$1 ', $venue)))); ?>
+<? $posternotesraw = strip_tags($notes); ?>
+<? $posternotes = urlencode(strtolower (rtrim(preg_replace('/(.)/', '$1 ', $posternotesraw)))); ?>
+<? $map = urlencode($mapparams); ?>
+<b><?= date('D', strtotime($event_date)) ?>, <?= date('M j', strtotime($event_date)) ?></b> | <?= $city ?>, <?= $state ?> | <? echo "<a href=\"$venue_url\">"; ?><?= $venue ?></a> <? if ($event_title != "") {echo " | $event_title";}?> <? echo "[<a href=\"http://maps.google.com/maps?f=q&amp;hl=en&amp;q=$map\">map</a>]"; ?> <? echo "[<a href=\"../pdf.php?date=$posterdate&amp;venue=$postervenue&amp;notes=$posternotes\">poster</a>]"; ?><br/><?= $notes ?><br/>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.google.com/schemas/sitemap/0.84">
+<url>
+<loc>http://www.ourfriendselectric.net/</loc>
+<lastmod>2006-08-01</lastmod>
+<changefreq>daily</changefreq>
+<priority>1.0</priority>
+</url> 
+<url>
+<loc>http://www.ourfriendselectric.net/ch.php?pg=news</loc>
+<lastmod>2006-08-01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url> 
+<url>
+<loc>http://www.ourfriendselectric.net/ch.php?pg=music</loc>
+<lastmod>2006-08-01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url> 
+<url>
+<loc>http://www.ourfriendselectric.net/ch.php?pg=tours</loc>
+<lastmod>2006-08-01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>http://www.ourfriendselectric.net/ch.php?pg=contact</loc>
+<lastmod>2006-08-01</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url> 
+</urlset>

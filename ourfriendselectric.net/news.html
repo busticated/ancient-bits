@@ -1,0 +1,8 @@
+<!-- NEWS START -->
+<? $archive = $_GET['archive'] ?>
+<? if ($archive == "") {$archive="3";} ?>
+<? if ($archive == "1") {$archive="";} ?>
+<?php require("hostbaby");?>
+<? show_news("charlene", "news.tmpl", $archive); ?>
+<div id="news_footer"><a href="news.rss"><img src="images/<?= $st ?>-feed-icon.gif" width="16" height="16" alt="subscribe to charlene's news feed"></a> [RSS2.0] <a href="news.rss">Subscribe to News Feed</a> | <? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;archive=1\">"; ?>News Archive</a></div>
+<!-- NEWS END -->

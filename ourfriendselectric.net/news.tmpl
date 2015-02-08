@@ -1,0 +1,8 @@
+<? $pg = $_GET['pg']; ?>
+<? $st = $_GET['st']; ?>
+<div class="news_entry">
+<div class="news_title"><?= $news_title ?></div>
+<div class="news_text"><?= nl2br($news_text) ?></div>
+<br>
+<div class="news_links">posted on: <?= date($dateformat, strtotime($news_date)) ?> | <? echo "<a href=\"ch.php?pg=$pg&amp;st=$st&amp;news_id=$news_id\">"; ?>permalink</a></div>
+</div>

@@ -1,0 +1,58 @@
+<!-- GALLERY START -->
+<?php
+  /*
+   * We'll begin the script by telling PHP which directory to look
+   * at.  The path should be a string, and hence should be enclosed
+   * in single quotes, such as 'home/door'
+   */
+  $scanthis = '/www/sharkattackmusic.com/web/ch/images/gallery/thumbs/';
+  
+  /*
+   * scandir(); will list all of the files and directories in the
+   * specified directory, specified by $scanthis (above).  In this
+   * line we're also initiating a new array into which we're placing
+   * the results of the $scandir function so it can be processed
+   * later. 
+   */
+  $scanlisting = scandir($scanthis);
+  
+  /*
+   * Here we create a new array to be used in the next step.  This
+   * array begins empty and will be filled by way of a foreach loop
+   * using values from our first array, $scanlisting.
+   */
+  $filelisting = array();
+
+  /*
+   * We will run through the list and transfer all of the file
+   * names to a new array.  The "as" will indicate the variable
+   * names by which we can reference the key or value in this array.
+   */
+  foreach($scanlisting as $key => $value){
+    
+    /*
+     * is_file(); will tell you whether the selected path is a
+     * file.  If it is a file, we want to add it to our new
+     * array.  
+     */
+    if (is_file("$scanthis/$value") == true && $value != '.' && $value != '..'){
+      
+      /*
+       * In order to append data to the array, we'll use empty square
+       * brackets.  The name of the array is the new, empty array we.
+       * just created called $filelisting.  The value we are assigning
+       * to it is the variable defined in the foreach(); function.
+       */
+      $filelisting[] = $value;
+    }
+  }
+  
+  /*
+   * If we want, we can output our array as a list of links.
+   */
+  foreach($filelisting as $key => $value){
+    print("<a href=\"images/gallery/full/full-$value\"><img class=\"thumb\" src=\"images/gallery/thumbs/$value\"></a>");
+  }
+  
+?> 
+<!-- GALLERY END -->
